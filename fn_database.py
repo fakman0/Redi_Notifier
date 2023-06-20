@@ -12,7 +12,7 @@ def create_database():
 
     # Creates a table if it does not exist
     if not table_exists:
-        cursor.execute('''CREATE TABLE posts(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT, score INTEGER, url TEXT)''')
+        cursor.execute('''CREATE TABLE posts(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT, score INTEGER, url TEXT, subreddit_id TEXT)''')
         print("Database and table created successfully.")
     else:
         print("Table 'posts' already exists. Skipping table creation.")
@@ -25,12 +25,13 @@ def crawl_posts(reddit, subreddit_name):
     subreddit = reddit.subreddit(subreddit_name)
     posts = []
 
-    for submission in subreddit.hot(limit=10):
+    for submission in subreddit.new(limit=10):
         post = {
             'title': submission.title,
             'content': submission.selftext,
             'score': submission.score,
-            'url': submission.url
+            'url': submission.url,
+            'subreddit_id': submission.subreddit_id
         }
         posts.append(post)
 
@@ -42,9 +43,8 @@ def add_posts_to_database(posts):
     cursor = db_connection.cursor()
 
     for post in posts:
-        cursor.execute("INSERT INTO posts (title, content, score, url) VALUES (?, ?, ?, ?)", (post['title'], post['content'], post['score'], post['url']))
+        cursor.execute("INSERT INTO posts (title, content, score, url, subreddit_id) VALUES (?, ?, ?, ?, ?)",(post['title'], post['content'], post['score'], post['url'], post['subreddit_id']))
 
-    
     db_connection.commit()
     print("Posts added to the database.")
     cursor.close()

@@ -14,4 +14,4 @@ db.create_database()
 # Crawl a posts
 posts = db.crawl_posts(reddit, input("Enter a subreddit title: "))
 # Add posts to database
-db.add_posts_to_database(posts)
+#db.add_posts_to_database(posts)

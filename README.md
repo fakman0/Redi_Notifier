@@ -12,3 +12,6 @@ pip install praw<br>
 
 keybroad modülü<br>
 pip install keyboard
+
+flask modülü<br>
+pip install flask

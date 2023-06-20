@@ -43,7 +43,7 @@ def add_posts_to_database(posts):
     db_connection = sqlite3.connect("database.db")
     cursor = db_connection.cursor()
 
-    # Get the subreddit_ids of the last 20 posts in the database
+    # Get the subreddit_ids of the last 15 posts in the database
     cursor.execute("SELECT subreddit_id FROM posts ORDER BY id DESC LIMIT 15")
     existing_subreddit_ids = set(row[0] for row in cursor.fetchall())
 

@@ -3,11 +3,11 @@ import fn_database as db
 import threading
 import keyboard
 
-global exit_flag
 exit_flag = False
 # If the user presses the "esc" key, terminate the program.
 def keyboard_listener():
     keyboard.wait('esc')
+    global exit_flag
     exit_flag = True
     print("Program terminated.")
 
@@ -28,18 +28,16 @@ def crawl_add_post():
         db.add_posts_to_database(posts)
         db.time.sleep(30)
 
-
 # Create a database
 db.create_database()
 subreddit = input("Enter a subreddit title: ")
 #threads
-listener_thread = threading.Thread(target=keyboard_listener)
+#listener_thread = threading.Thread(target=keyboard_listener)
 crawler_thread = threading.Thread(target=crawl_add_post)
-listener_thread.start()
+#listener_thread.start()
 crawler_thread.start()
 
-print("Crawl process started.")
-print("Press the \"ESC\" key to end the process.")
+print("Crawl process started.\nPress the \"ESC\" key to end the process.")
 
-keyboard_listener_thread.join()
-crawl_add_post.join()
+#keyboard_listener_thread.join()
+crawler_thread.join()

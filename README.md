@@ -15,3 +15,5 @@ pip install keyboard
 
 flask modülü<br>
 pip install flask
+
+NOT: keyboard modülünün klavye erişiminin sağlanması için "root" yetkileriyle çalıştırınız.

@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request
 import sqlite3
 
-
 app = Flask(__name__)
 DATABASE = 'database.db'
 
@@ -10,8 +9,8 @@ def get_db_connection():
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
     return conn
-# lists all values
 
+# lists all values
 @app.route('/posts', methods=['GET'])
 def get_all_posts():
     conn = get_db_connection()

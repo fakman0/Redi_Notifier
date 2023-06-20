@@ -9,3 +9,6 @@ brew install python # python ve pip paketlerini kuracaktır.<br>
 <br>
 PRAW (Python Reddit API Wrapper) kurulumu<br>
 pip install praw<br>
+
+keybroad modülü<br>
+pip install keyboard

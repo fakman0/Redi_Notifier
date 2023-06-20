@@ -23,14 +23,14 @@ def get_all_posts():
 
 # Sorts score variables
 @app.route('/posts/sorted', methods=['GET'])
-def get_sorted_posts():
+def get_sorted_scores():
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM posts ORDER BY score DESC')
-    posts = cursor.fetchall()
+    cursor.execute('SELECT score FROM posts ORDER BY score DESC')
+    scores = [row[0] for row in cursor.fetchall()]
     conn.close()
-    post_dicts = [dict(post) for post in posts]
-    return jsonify(post_dicts)
+    return jsonify(scores)
+
 
 # Finds the content of the score variable
 @app.route('/posts/score/<int:score>', methods=['GET'])

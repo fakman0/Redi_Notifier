@@ -1,7 +1,5 @@
 import praw
 import random
-import sqlite3
-
 
 # This function generates a random "user_agent"
 def generate_user_agent():

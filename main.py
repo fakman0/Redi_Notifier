@@ -41,8 +41,8 @@ def login_with_credentials():
         reddit.user.me()
         print("Login successful. User name:", reddit.user.me().name)
         return reddit
-    except praw.exceptions.APIException as e:
-        print("Login error:", e)
+    except:
+        print("Login error:")
         return None
 
 # Sign in
@@ -51,5 +51,3 @@ reddit = login_with_credentials()
 while reddit is None:
     print("Login failed. Please try again.")
     reddit = login_with_credentials()
-
-

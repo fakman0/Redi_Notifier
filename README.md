@@ -24,6 +24,8 @@ keybroad modülü<br>
 flask modülü<br>
 > pip install flask
 
-Ubuntu 
+Ubuntu
+
+> pip install praw flask keyboard
 
 NOT: keyboard modülünün klavye erişiminin sağlanması için "root" yetkileriyle çalıştırınız.

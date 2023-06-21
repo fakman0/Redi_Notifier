@@ -9,7 +9,7 @@ def keyboard_listener():
     keyboard.wait('esc')
     global exit_flag
     exit_flag = True
-    print("Program terminated.")
+    print("The latest data is being updated.\nCrawl process terminates... (avg. 30 seconds)")
 
 # Sign in
 reddit = login.login_with_credentials()
@@ -32,12 +32,14 @@ def crawl_add_post():
 db.create_database()
 subreddit = input("Enter a subreddit title: ")
 #threads
-#listener_thread = threading.Thread(target=keyboard_listener)
+listener_thread = threading.Thread(target=keyboard_listener)
 crawler_thread = threading.Thread(target=crawl_add_post)
-#listener_thread.start()
+listener_thread.start()
 crawler_thread.start()
 
 print("Crawl process started.\nPress the \"ESC\" key to end the process.")
 
-#keyboard_listener_thread.join()
+listener_thread.join()
 crawler_thread.join()
+
+print("Program terminated.")

@@ -15,7 +15,9 @@ source $HOME/.brewconfig.zsh<br>
 ```
 <br>
 brew aracılığıyla python ve pip kurmak için<br>
+```
 brew install python # python ve pip paketlerini kuracaktır.<br>
+```
 <br>
 PRAW (Python Reddit API Wrapper) kurulumu
 ```

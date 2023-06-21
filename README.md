@@ -9,23 +9,23 @@ keyboard
 ```
 
 MacOS homebrew kurmak için<br>
-> curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh<br>
-> source $HOME/.brewconfig.zsh<br>
+``` curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh<br>
+source $HOME/.brewconfig.zsh<br> ```
 <br>
 brew aracılığıyla python ve pip kurmak için<br>
 brew install python # python ve pip paketlerini kuracaktır.<br>
 <br>
-PRAW (Python Reddit API Wrapper) kurulumu<br>
-> pip install praw<br>
+PRAW (Python Reddit API Wrapper) kurulumu
+```pip install praw```
 
 keybroad modülü<br>
-> pip install keyboard
+```pip install keyboard```
 
 flask modülü<br>
-> pip install flask
+```pip install flask```
 
 Ubuntu
 
-> pip install praw flask keyboard
+```pip install praw flask keyboard```
 
 NOT: keyboard modülünün klavye erişiminin sağlanması için "root" yetkileriyle çalıştırınız.

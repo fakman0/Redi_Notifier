@@ -14,9 +14,10 @@ curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh<br>
 source $HOME/.brewconfig.zsh<br> 
 ```
 <br>
-brew aracılığıyla python ve pip kurmak için<br>
+brew aracılığıyla python ve pip kurmak için
+
 ```
-brew install python # python ve pip paketlerini kuracaktır.<br>
+brew install python # python ve pip paketlerini kuracaktır.
 ```
 <br>
 PRAW (Python Reddit API Wrapper) kurulumu

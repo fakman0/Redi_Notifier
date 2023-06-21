@@ -21,6 +21,7 @@ brew install python # python ve pip paketlerini kuracaktır.
 ```
 <br>
 PRAW (Python Reddit API Wrapper) kurulumu
+
 ```
 pip install praw
 ```

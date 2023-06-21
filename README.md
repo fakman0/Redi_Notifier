@@ -20,21 +20,12 @@ brew aracılığıyla python ve pip kurmak için<br>
 brew install python # python ve pip paketlerini kuracaktır.
 ```
 
-PRAW (Python Reddit API Wrapper) kurulumu<br>
+PRAW (Python Reddit API Wrapper), keybroad, flaskkurulumu<br>
 
 ```
-pip install praw
+pip install praw keyboard flask
 ```
 
-keybroad modülü<br>
-```
-pip install keyboard
-```
-
-flask modülü<br>
-```
-pip install flask
-```
 <br>
 Ubuntu
 

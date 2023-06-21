@@ -13,14 +13,14 @@ MacOS homebrew kurmak için<br>
 curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh<br>
 source $HOME/.brewconfig.zsh<br> 
 ```
-<br>
-brew aracılığıyla python ve pip kurmak için
+
+brew aracılığıyla python ve pip kurmak için<br>
 
 ```
 brew install python # python ve pip paketlerini kuracaktır.
 ```
-<br>
-PRAW (Python Reddit API Wrapper) kurulumu
+
+PRAW (Python Reddit API Wrapper) kurulumu<br>
 
 ```
 pip install praw
@@ -35,7 +35,7 @@ flask modülü<br>
 ```
 pip install flask
 ```
-
+<br>
 Ubuntu
 
 ```

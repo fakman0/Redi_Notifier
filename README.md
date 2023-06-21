@@ -1,19 +1,29 @@
 # Redi_Notifier
 
-MacOS brew kurmak için<br>
-curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh<br>
-source $HOME/.brewconfig.zsh<br>
+Gereksinimler
+```
+python3
+praw
+flask
+keyboard
+```
+
+MacOS homebrew kurmak için<br>
+> curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh<br>
+> source $HOME/.brewconfig.zsh<br>
 <br>
 brew aracılığıyla python ve pip kurmak için<br>
 brew install python # python ve pip paketlerini kuracaktır.<br>
 <br>
 PRAW (Python Reddit API Wrapper) kurulumu<br>
-pip install praw<br>
+> pip install praw<br>
 
 keybroad modülü<br>
-pip install keyboard
+> pip install keyboard
 
 flask modülü<br>
-pip install flask
+> pip install flask
+
+Ubuntu 
 
 NOT: keyboard modülünün klavye erişiminin sağlanması için "root" yetkileriyle çalıştırınız.

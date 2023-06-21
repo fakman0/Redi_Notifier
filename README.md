@@ -36,4 +36,14 @@ apt install python3-pip
 pip install praw flask keyboard
 ```
 
-NOT: keyboard modülünün klavye erişiminin sağlanması için "root" yetkileriyle çalıştırınız.
+NOT: 
+```
+keyboard modülünün klavye erişiminin sağlanması için "root" yetkileriyle çalıştırınız.
+
+Docker üzerinde main.py çalışabilmesi için girdi alınması amacıyla
+docker run -itp 5000:5000 <img_id> # şeklinde çalıştırılmalıdır.
+
+docker üzerinde main.py dock üzerinde çalıştırılacaksa bir aygıt olmadığından hata verecektir, keyboard fonksiyon ve threadleri yorum satırına alınmalıdır.
+
+Api.py docker aracılığıyla çalıştırıldığında gönderilen isteklerden dönüt alınamazsa UFW veya docker network konfigürasyon ayarlarını kontrol ediniz.
+```

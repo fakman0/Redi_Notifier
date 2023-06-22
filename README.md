@@ -47,3 +47,9 @@ docker üzerinde main.py dock üzerinde çalıştırılacaksa bir aygıt olmadı
 
 Api.py docker aracılığıyla çalıştırıldığında gönderilen isteklerden dönüt alınamazsa UFW veya docker network konfigürasyon ayarlarını kontrol ediniz.
 ```
+
+Crawl Uygulamasını çalıştırmak için
+> python3 main.py
+
+Api servisini başlatmak için
+> python3 api.py
